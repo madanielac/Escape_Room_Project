@@ -7,8 +7,14 @@ Created on Sun Dec  1 20:46:06 2019
 """
 
 
-import loginFP
+#import loginFP
 from graphics import *
+
+import threading 
+
+
+from Clues import get_clue
+
 
 class Classroom:
     
@@ -86,12 +92,24 @@ class Classroom:
             player_1 = 
         '''
 
-        
 
         
 w = GraphWin("Intro to Python", 1000, 650)
     
 C = Classroom(w)
 C.create_elements()
-C.window.getMouse()
-C.window.close()
+get_clue('door').draw(w)
+
+
+
+#def gfg():
+    #global C
+    
+    #C.window.close()
+    
+#timer = threading.Timer(5.0, gfg) 
+#timer.start() 
+
+
+
+
