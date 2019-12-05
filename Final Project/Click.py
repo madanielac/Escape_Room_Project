@@ -5,6 +5,7 @@ Created on Thu Dec  5 12:21:51 2019
 @author: Katie
 """
 
+#function to see what object the player clicks on, and the output would be choose_element, which will then be input into the Clues function to output the right clues based on the object.
 
 def click_object(self):
     win = self.window
@@ -23,3 +24,4 @@ def click_object(self):
         choose_element = table
     if coordinate in self.door:
         choose_element = door
+    return choose_element
