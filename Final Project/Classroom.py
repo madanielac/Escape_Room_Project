@@ -9,6 +9,8 @@ Created on Sun Dec  1 20:46:06 2019
 
 #import loginFP
 from graphics import *
+from Key import *
+from Click import *
 
 import threading 
 
