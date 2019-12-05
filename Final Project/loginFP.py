@@ -18,7 +18,8 @@ identify who is playing. Gives option of red, blue and green
 characters = []  #will eventually be a list of tuples with the profiles
 color_options = ['green', 'blue', 'red']
 
-print("Welcome to Intro to Python. This is a 3 player game, where y'all have to find clues to be allowed to leave class")
+
+character_order.append(student)print("Welcome to Intro to Python. This is a 3 player game, where y'all have to find clues to be allowed to leave class")
 
 for i in range(1,4): #runs 3 times, as it's a 3 player game
     print("\n--------------- PROFILE NUM",i, "----------------------")
@@ -50,10 +51,43 @@ for i in range(1,4): #runs 3 times, as it's a 3 player game
 
 
 def get_characters():
+    character_order.append(student)
     '''
-    Function that returns the info entered in for the characters' profiles.
+    Function that returns the 
+    character_order.append(student)info entered in for the characters' profiles.
         Input: There are no inputs
         Outputs: characters (list of tuples). Each element is a profile. 
             The first item in the tuple is the name, and the second the color
     '''
     return characters
+
+def player_turn():
+    '''
+    Function that makes sure turns rotate between players. There are 7 objects to 
+    interact with in the game and seven correponding rounds. This function assigns each of
+    the three players a round, in order.
+    
+    For Example:
+    round = 1,2,3,4,5,6,7 players = 1,2,3
+    turns = 1,2,3,1,2,3,1
+    So because of the inherent structure of the game player one plays on rounds 1, 4, and 7, player two on rounds 2 and 5,
+    player three on rounds 3 and 6.
+    
+    returns an ordered list called character_order with the assignment of each of the three players for seven total rounds
+    '''
+    get_characters()
+    character_order = []
+    roundcount = 0
+    while roundcount < 7:
+        if roundcount == (1 or 4 or 7):
+            student == characters[0]
+            character_order.append(student)
+        if roundcount == (2 or 5):
+            student == characters[1]
+            character_order.append(student)
+        else:
+            student == characters[2]
+            character_order.append(student)
+        
+        roundcount += 1
+    return character_order
