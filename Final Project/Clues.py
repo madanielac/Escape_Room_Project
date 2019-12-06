@@ -16,7 +16,7 @@ win_drawing = 'WINDOW: This term is used to describe an unordered set of objects
 back_board = 'BACK BOARD: This type of variable is defined at the outermost scope of the program, making it accessible to all functions in the program. You will want to take the 4th letter from this term. \nGo take a look at the table for your next set of hints!\nClick anywhere on the screen whenever you are done with your turn'
 table = 'TABLE: Anonymous functions can be written using ______ expressions. You will want to keep the 2nd letter of this term. Go to the door to get your final hint to leave the classroom!\nClick anywhere on the screen whenever you are done with your turn'
 #door = 'This non-scalar object holds the following properties: comprised of ordered smaller elements, immutable, delimited by parentheses. You will want to keep the last letter of this term.'
-door = 'DOOR: You will only be able to leave if you have collected the other clues and have the correct password.\nEnter the password on the console.'
+door = "DOOR: Here's a freebie for you: N. You will only be able to leave if you have collected the other clues and have the correct password.\nEnter the password on the console."
 
 text = ''
 
