@@ -95,11 +95,16 @@ class Classroom:
         '''
 
 
-        
+# Creating graphics window to play game        
 w = GraphWin("Intro to Python", 1000, 650)
-    
+
+# Creating Classroom object to hold "elements"
 C = Classroom(w)
+
+# Acutally creates elements in "room"
 C.create_elements()
+
+# Once all the clues are collected and all the right answers are enetered (??)
 get_clue('door').draw(w)
 
 
