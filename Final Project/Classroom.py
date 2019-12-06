@@ -7,10 +7,9 @@ Created on Sun Dec  1 20:46:06 2019
 """
 
 
-#import loginFP
+import loginFP
 from graphics import *
-from Key import *
-from Click import *
+import Turns
 
 import threading 
 
@@ -82,30 +81,178 @@ class Classroom:
         self.win_draw.draw(self.window)
         
         #drawing door
+        # door @ (25,490) and (170, 500), so 25 to 170 on x and 490 to 500 on y
         self.door = Rectangle(Point(25, 490), Point(170, 500))
         self.door.setFill('#BB981E')
         
         self.door.draw(self.window)
         
+        
+    def click_object(self, location_clicked):
         '''
-        def draw_player_1(self):
-            player_1_name = loginFP.get_characters()[0][0]
-            plater_1_color = loginFP.get_characters()[0][1]
-            player_1 = 
+        Function to see what object is selected by the player.
+            Input: self
+            Output: choose_element (str) - element that is selected. 
+                                            Will later be used as input for Clues function.
+                    or (str) if an object without a clue was selected indicating that they didn't find a clue 
         '''
+        
+        
+        coordinate = location_clicked
+        print(type(coordinate))
+        
+        x_position = 20
+        y_position = 0
+        
+        found = False
+        choose_element = ''
+        
+        
+        trial_list = []
+        
+        
+        #to check for whole projector
+        while x_position <= 400:
+            y_position = 0
+            
+            while y_position <=20:
+            
+                trial_list.append((Point(float(x_position), float(y_position))))
+                
+                if coordinate in trial_list:
+                    print('GOT HERE')
+                    choose_element = 'screen'
+                    found = True
+                
+                
+                if coordinate == Point(float(x_position), float(y_position)):
+                    print('GOT HERE')
+                    choose_element = 'screen'
+                    found = True
+                
+                
+                y_position += 1
+            x_position += 1
+                
+        if found == False:
+            #to check for whole front whiteboard
+            x_position = 600
+            y_position = 0
+            
+            while x_position <= 970:
+                while y_position <=20:
+                    
+                    if coordinate == Point(x_position, y_position):
+                        choose_element = 'front_board'
+                        found = True
+                    
+                    y_position += 1
+                x_position += 1
+                
+        if found == False:
+            #to check for whole window
+            
+            x_position = 990
+            y_position = 30
+            
+            while x_position <= 1000:
+                while y_position <=330:
+                    
+                    if coordinate == Point(x_position, y_position):
+                        choose_element = 'win_drawing'
+                        found = True
+                    
+                    y_position += 1
+                x_position += 1
+        
+        if found == False:
+            #to check for whole back whiteboard
 
+            x_position = 600
+            y_position = 480
+            
+            while x_position <= 970:
+                while y_position <=500:
+                    
+                    if coordinate == Point(x_position, y_position):
+                        choose_element = 'back_board'
+                        found = True
+                    
+                    y_position += 1
+                x_position += 1
+                
+        if found == False:
+            #to check for table
 
-# Creating graphics window to play game        
+            x_position = 200
+            y_position = 150
+            
+            while x_position <= 800:
+                while y_position <=220:
+                    
+                    if coordinate == Point(x_position, y_position):
+                        choose_element = 'table'
+                        found = True
+                    
+                    y_position += 1
+                x_position += 1
+                
+        if found == False:
+            #to check for door
+
+            x_position = 25
+            y_position = 490
+            
+            while x_position <= 170:
+                while y_position <=500:
+                    
+                    if coordinate == Point(x_position, y_position):
+                        choose_element = 'door'
+                        found = True
+                    
+                    y_position += 1
+                x_position += 1
+        
+        if found == False:
+            choose_element = 'Object selected is not a clue'
+        
+        #if coordinate in self.face:
+         #   choose_element = 'jed'
+            
+
+        
+        print(choose_element)
+        print('DANCING QUEEN')
+        return choose_element
+   
+    
+    
+'''
+#loginFP.get_profiles()     
 w = GraphWin("Intro to Python", 1000, 650)
-
-# Creating Classroom object to hold "elements"
+    
 C = Classroom(w)
-
-# Acutally creates elements in "room"
 C.create_elements()
+r = w.getMouse()
 
-# Once all the clues are collected and all the right answers are enetered (??)
-get_clue('door').draw(w)
+#print(type(r))
+print(r)
+C.click_object(r)
+w.close()
+'''
+
+
+'''
+loginFP.get_profiles()     
+w = GraphWin("Intro to Python", 1000, 650)
+    
+C = Classroom(w)
+C.create_elements()
+get_clue('front_board').draw(w)
+Turns.player_turn(w)
+
+#w.getMouse()
+#w.close()
 
 
 
@@ -117,6 +264,6 @@ get_clue('door').draw(w)
 #timer = threading.Timer(5.0, gfg) 
 #timer.start() 
 
-
+'''
 
 
