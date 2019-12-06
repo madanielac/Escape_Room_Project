@@ -53,12 +53,14 @@ while key == False:
             win.close()
         else:
             delete_clue()
-            text = Text(Point(500, 540), 'That aint it chief. Click anywhere on the screen to continue playing')
+            text = Text(Point(500, 540), "That ain't it chief. Double click anywhere on the screen to continue playing")
             text.draw(win)
+            win.getMouse()
+            text.undraw()
     
     
     win.getMouse()
-    text.undraw()
+    
     delete_clue()
     delete_profile()
     player_turn(win)

@@ -24,6 +24,11 @@ class Classroom:
 
     
     def create_elements(self):
+        '''
+        Draws the whole classroom to the window
+            No inputs (aside from self). No putputs
+        
+        '''
         
         #draw background
         background_color = Rectangle(Point(0, 0), Point(1000, 500))
