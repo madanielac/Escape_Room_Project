@@ -10,7 +10,6 @@ import loginFP
 from Classroom import *
 from graphics import *
 from Turns import *
-from Key import *
 import click
 from Clues import *
 
@@ -36,8 +35,8 @@ player_turn(win)
 while key == False:
     
     
-    clicked_object = 'front_board'
-    #clicked_object = class_draw.click_object(win.getMouse())
+    
+    clicked_object = class_draw.click_object(win.getMouse())
     get_clue(clicked_object).draw(win) #prints clue for chosen object
     
     if clicked_object == 'door':
@@ -51,6 +50,7 @@ while key == False:
             text.draw(win)
             win.getMouse()
             win.close()
+            break
         else:
             delete_clue()
             text = Text(Point(500, 540), "That ain't it chief. Double click anywhere on the screen to continue playing")
@@ -60,9 +60,9 @@ while key == False:
     
     
     win.getMouse()
-    
-    delete_clue()
     delete_profile()
+    delete_clue()
+    
     player_turn(win)
     
     

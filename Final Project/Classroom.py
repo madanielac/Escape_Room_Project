@@ -104,7 +104,7 @@ class Classroom:
         
         
         coordinate = location_clicked
-        print(type(coordinate))
+        
         
         x_position = 20
         y_position = 0
@@ -113,25 +113,18 @@ class Classroom:
         choose_element = ''
         
         
-        trial_list = []
         
+        x = coordinate.getX()
+        y = coordinate.getY()
         
         #to check for whole projector
         while x_position <= 400:
             y_position = 0
             
             while y_position <=20:
-            
-                trial_list.append((Point(float(x_position), float(y_position))))
                 
-                if coordinate in trial_list:
-                    print('GOT HERE')
-                    choose_element = 'screen'
-                    found = True
-                
-                
-                if coordinate == Point(float(x_position), float(y_position)):
-                    print('GOT HERE')
+                if x == x_position and y == y_position:
+                    
                     choose_element = 'screen'
                     found = True
                 
@@ -139,15 +132,33 @@ class Classroom:
                 y_position += 1
             x_position += 1
                 
+        #checks for Jed!
+        if found == False:
+            #to check for whole front whiteboard
+            x_position = 445
+            y_position = 20
+            
+            while x_position <= 495:
+                y_position = 20
+                while y_position <=70:
+                    
+                    if x == x_position and y == y_position:
+                        choose_element = 'jed'
+                        found = True
+                    
+                    y_position += 1
+                x_position += 1
+            
         if found == False:
             #to check for whole front whiteboard
             x_position = 600
             y_position = 0
             
             while x_position <= 970:
+                y_position = 0
                 while y_position <=20:
                     
-                    if coordinate == Point(x_position, y_position):
+                    if x == x_position and y == y_position:
                         choose_element = 'front_board'
                         found = True
                     
@@ -161,9 +172,10 @@ class Classroom:
             y_position = 30
             
             while x_position <= 1000:
+                y_position = 30
                 while y_position <=330:
                     
-                    if coordinate == Point(x_position, y_position):
+                    if x == x_position and y == y_position:
                         choose_element = 'win_drawing'
                         found = True
                     
@@ -177,9 +189,10 @@ class Classroom:
             y_position = 480
             
             while x_position <= 970:
+                y_position = 480
                 while y_position <=500:
                     
-                    if coordinate == Point(x_position, y_position):
+                    if x == x_position and y == y_position:
                         choose_element = 'back_board'
                         found = True
                     
@@ -193,9 +206,10 @@ class Classroom:
             y_position = 150
             
             while x_position <= 800:
+                y_position = 150
                 while y_position <=220:
                     
-                    if coordinate == Point(x_position, y_position):
+                    if x == x_position and y == y_position:
                         choose_element = 'table'
                         found = True
                     
@@ -209,9 +223,10 @@ class Classroom:
             y_position = 490
             
             while x_position <= 170:
+                y_position = 490
                 while y_position <=500:
                     
-                    if coordinate == Point(x_position, y_position):
+                    if x == x_position and y == y_position:
                         choose_element = 'door'
                         found = True
                     
@@ -226,8 +241,7 @@ class Classroom:
             
 
         
-        print(choose_element)
-        print('DANCING QUEEN')
+        #print(choose_element)
         return choose_element
    
     
@@ -241,11 +255,11 @@ C.create_elements()
 r = w.getMouse()
 
 #print(type(r))
-print(r)
+
 C.click_object(r)
 w.close()
-'''
 
+'''
 
 '''
 loginFP.get_profiles()     

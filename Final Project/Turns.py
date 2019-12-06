@@ -37,7 +37,7 @@ def player_turn(window):
         
     
 
-    text_name = Text(Point(120, 600), "It's " + name + "'s turn!" )
+    text_name = Text(Point(230, 600), "It's " + name + "'s turn!  Click on the object you want to check for clues" )
     #text_name = text_name.setSize(10)
     text_name.draw(window)
     
