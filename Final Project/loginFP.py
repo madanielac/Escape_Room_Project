@@ -14,6 +14,8 @@ def get_profiles():
     
     This is the login part of the program. Asks for names and color to 
     identify who is playing. Gives option of red, blue and green 
+        Input: no input
+        Output: no output, but it creates a list of tuples with the names and colors chosen
     
     '''
     

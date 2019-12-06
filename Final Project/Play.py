@@ -10,7 +10,6 @@ import loginFP
 from Classroom import *
 from graphics import *
 from Turns import *
-import click
 from Clues import *
 
 
