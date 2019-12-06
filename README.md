@@ -1,7 +1,11 @@
 # CS 151-03 FINAL PROJECT: Escape Room Game
 
+To play game run Play.py
 
-The Classroom.py program in addition to Click.py, Clues.py, Key.py, Play.py, Turns.py, graphics.py, and loginFP.py executes the interactive multiplayer Escape Room game through a graphics window.
+*How to play: Run Play.py. You are going to be prompted to enter player's information into the console to create their profiles. Then a graphics window is created with the scape room. Each player can click on an element to search for clues that ultimately will allow them to get the full password to be entered at the door. Once the door is selected the player can put in what they believe to be the password into the console.
+Note: Letters collected from clues are not in order, so you need to collect them and then reorder them when you get to the door.*
+
+Interactive multiplayer Escape Room game played through a graphics window.
 
 The only files used are:
 
