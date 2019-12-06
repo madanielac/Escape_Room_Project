@@ -44,6 +44,7 @@ def get_clue(chosen_element):
     elif chosen_element == 'table':
         text = Text(Point(500, 540), table)
     elif chosen_element == 'door':
+        Key()
         text = Text(Point(500, 540), door)
         
     return text
