@@ -27,9 +27,10 @@ def player_turn(window):
     profiles = loginFP.get_characters()
 
     if turn == 2:
-        turn = 0
         name = profiles[turn][0]
         color = profiles[turn][1]
+        turn = 0
+        
     else:
         name = profiles[turn][0]
         color = profiles[turn][1]
@@ -37,7 +38,7 @@ def player_turn(window):
         
     
 
-    text_name = Text(Point(230, 600), "It's " + name + "'s turn!  Click on the object you want to check for clues" )
+    text_name = Text(Point(240, 600), "It's " + name + "'s turn!  Click on the object you want to check for clues" )
     #text_name = text_name.setSize(10)
     text_name.draw(window)
     
