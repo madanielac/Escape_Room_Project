@@ -20,7 +20,7 @@ def click_object(self):
         choose_element = 'win_drawing'
     if coordinate in self.board_back:
         choose_element = 'back_board'
-    if coordinate in self.table:
+    if coordinate in self.table_1:
         choose_element = 'table'
     if coordinate in self.door:
         choose_element = 'door'
