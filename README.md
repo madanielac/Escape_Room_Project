@@ -1,4 +1,4 @@
-# CS 151-03 FINAL PROJECT: Escape Room Game
+Escape Room Game
 
 To play game run Play.py
 
