@@ -1,4 +1,4 @@
-#Escape Room Game
+# Escape Room Game
 
 *How to play: Run Play.py. You are going to be prompted to enter player's information into the console to create their profiles. Then a graphics window is created with the scape room. Each player can click on an element to search for clues that ultimately will allow them to get the full password to be entered at the door. Once the door is selected the player can put in what they believe to be the password into the console.
 Note: Letters collected from clues are not in order, so you need to collect them and then reorder them when you get to the door.*
