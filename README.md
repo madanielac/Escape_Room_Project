@@ -6,7 +6,7 @@ Note: Letters collected from clues are not in order, so you need to collect them
 
 Interactive multiplayer Escape Room game played through a graphics window.
 
-### Files used are:
+### Files used:
 
 - Clues.py Has a function that provides the text of the clue chosen and another one to delete text (clues) from screen
 
