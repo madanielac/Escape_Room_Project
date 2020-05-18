@@ -1,12 +1,12 @@
 # Escape Room Game
 
-## *How to play: ## 
+## How to play: ## 
 Run Play.py. You are going to be prompted to enter player's information into the console to create their profiles. Then a graphics window is created with the scape room. Each player can click on an element to search for clues that ultimately will allow them to get the full password to be entered at the door. Once the door is selected the player can put in what they believe to be the password into the console.
 Note: Letters collected from clues are not in order, so you need to collect them and then reorder them when you get to the door.*
 
 Interactive multiplayer Escape Room game played through a graphics window.
 
-## Files used are:##
+### Files used are:
 
 - Clues.py Has a function that provides the text of the clue chosen and another one to delete text (clues) from screen
 
