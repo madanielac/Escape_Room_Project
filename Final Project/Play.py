@@ -67,13 +67,3 @@ while key == False:
     
 win.close()
     
-    
-
-
-#get_clue('front_board').draw(w)
-
-#player_turn(win)
-#win.getMouse()
-#delete_profile()
-#win.getMouse()
-#win.close()
